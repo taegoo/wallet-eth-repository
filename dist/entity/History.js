@@ -31,10 +31,10 @@ __decorate([
     __metadata("design:type", String)
 ], History.prototype, "type", void 0);
 __decorate([
-    typeorm_1.Index('IX_HISTORY_REQUESTER'),
+    typeorm_1.Index('IX_HISTORY_TOFROM'),
     typeorm_1.Column({ type: 'varchar', length: 64 }),
     __metadata("design:type", String)
-], History.prototype, "requester", void 0);
+], History.prototype, "toFrom", void 0);
 __decorate([
     typeorm_1.Column({ type: 'varchar', length: 8, default: wallet_api_eth_common_1.EtherDefaultUnit }),
     __metadata("design:type", String)

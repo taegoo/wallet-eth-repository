@@ -4,7 +4,7 @@ export declare class History {
     walletId: number;
     coin: string;
     type: string;
-    requester: string;
+    toFrom: string;
     unit: string;
     amount: string;
     fee: string;

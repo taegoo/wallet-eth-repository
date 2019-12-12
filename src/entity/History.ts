@@ -17,9 +17,9 @@ export class History {
     @Column({ type: 'varchar', length: 12 })
     public type: string;
 
-    @Index('IX_HISTORY_REQUESTER')
+    @Index('IX_HISTORY_TOFROM')
     @Column({ type: 'varchar', length: 64 })
-    public requester: string;
+    public toFrom: string;
 
     @Column({ type: 'varchar', length: 8, default: EtherDefaultUnit })
     public unit: string;
