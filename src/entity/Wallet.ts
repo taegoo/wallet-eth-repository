@@ -1,4 +1,4 @@
-import { Entity, Column, OneToMany, PrimaryGeneratedColumn, Index, CreateDateColumn, JoinTable } from 'typeorm';
+import { Entity, Column, OneToMany, PrimaryGeneratedColumn, Index, CreateDateColumn, JoinTable, RelationCount } from 'typeorm';
 import { Address } from './Address';
 import { Balance } from './Balance';
 import { History } from './History';
@@ -40,4 +40,7 @@ export class Wallet {
     })
     @JoinTable()
     history: History[];
+
+    @RelationCount((wallet: Wallet) => wallet.history)
+    historyCount: number;
 }

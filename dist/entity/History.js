@@ -69,7 +69,7 @@ __decorate([
     __metadata("design:type", Date)
 ], History.prototype, "regiDate", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => Wallet_1.Wallet, wallet => wallet.id),
+    typeorm_1.ManyToOne(type => Wallet_1.Wallet, wallet => wallet.history),
     __metadata("design:type", Wallet_1.Wallet)
 ], History.prototype, "wallet", void 0);
 History = __decorate([

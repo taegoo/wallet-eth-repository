@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const Address_1 = require("./Address");
 const Balance_1 = require("./Balance");
+const History_1 = require("./History");
 let Wallet = class Wallet {
 };
 __decorate([
@@ -49,6 +50,17 @@ __decorate([
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], Wallet.prototype, "balance", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => History_1.History, history => history.wallet, {
+        cascade: false
+    }),
+    typeorm_1.JoinTable(),
+    __metadata("design:type", Array)
+], Wallet.prototype, "history", void 0);
+__decorate([
+    typeorm_1.RelationCount((wallet) => wallet.history),
+    __metadata("design:type", Number)
+], Wallet.prototype, "historyCount", void 0);
 Wallet = __decorate([
     typeorm_1.Entity('wallet')
 ], Wallet);
