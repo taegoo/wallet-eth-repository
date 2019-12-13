@@ -1,6 +1,7 @@
 import { Entity, Column, OneToMany, PrimaryGeneratedColumn, Index, CreateDateColumn, JoinTable } from 'typeorm';
 import { Address } from './Address';
 import { Balance } from './Balance';
+import { History } from './History';
 
 @Entity('wallet')
 export class Wallet {
@@ -32,4 +33,11 @@ export class Wallet {
     })
     @JoinTable()
     balance: Balance[];
+
+
+    @OneToMany(type => History, history => history.wallet, {
+        cascade: false
+    })
+    @JoinTable()
+    history: History[];
 }

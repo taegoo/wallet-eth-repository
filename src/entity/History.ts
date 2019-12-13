@@ -46,7 +46,7 @@ export class History {
     @CreateDateColumn({ type: 'datetime' })
     regiDate: Date;
 
-    @ManyToOne(type => Wallet, wallet => wallet.id)
+    @ManyToOne(type => Wallet, wallet => wallet.history)
     wallet: Wallet;
 
 }
