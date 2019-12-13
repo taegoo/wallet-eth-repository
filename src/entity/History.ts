@@ -14,6 +14,7 @@ export class History {
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 
+    @Index('IX_HISTORY_TYPE')
     @Column({ type: 'varchar', length: 12 })
     public type: string;
 

@@ -27,6 +27,7 @@ __decorate([
     __metadata("design:type", String)
 ], History.prototype, "coin", void 0);
 __decorate([
+    typeorm_1.Index('IX_HISTORY_TYPE'),
     typeorm_1.Column({ type: 'varchar', length: 12 }),
     __metadata("design:type", String)
 ], History.prototype, "type", void 0);
