@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./Address"));
 __export(require("./Balance"));
 __export(require("./History"));
-__export(require("./Transaction"));
+__export(require("./PoolAddress"));
+__export(require("./SyncedBlock"));
 __export(require("./Wallet"));
 //# sourceMappingURL=index.js.map

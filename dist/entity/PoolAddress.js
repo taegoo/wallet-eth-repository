@@ -10,26 +10,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-let Transaction = class Transaction {
+let PoolAddress = class PoolAddress {
 };
 __decorate([
-    typeorm_1.PrimaryColumn({ type: 'varchar', length: 96 }),
-    __metadata("design:type", String)
-], Transaction.prototype, "id", void 0);
+    typeorm_1.PrimaryGeneratedColumn({ type: 'bigint' }),
+    __metadata("design:type", Number)
+], PoolAddress.prototype, "id", void 0);
 __decorate([
     typeorm_1.Column({ type: 'varchar', length: 8 }),
     __metadata("design:type", String)
-], Transaction.prototype, "coin", void 0);
+], PoolAddress.prototype, "coin", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'text' }),
+    typeorm_1.Column({ type: 'varchar', length: 64 }),
     __metadata("design:type", String)
-], Transaction.prototype, "receipt", void 0);
+], PoolAddress.prototype, "address", void 0);
+__decorate([
+    typeorm_1.Index('IX_POOLADDRESS_WALLETID'),
+    typeorm_1.Column({ type: 'bigint', nullable: true }),
+    __metadata("design:type", Number)
+], PoolAddress.prototype, "walletId", void 0);
 __decorate([
     typeorm_1.CreateDateColumn({ type: 'datetime' }),
     __metadata("design:type", Date)
-], Transaction.prototype, "regiDate", void 0);
-Transaction = __decorate([
-    typeorm_1.Entity('transaction')
-], Transaction);
-exports.Transaction = Transaction;
-//# sourceMappingURL=Transaction.js.map
+], PoolAddress.prototype, "createdDate", void 0);
+__decorate([
+    typeorm_1.UpdateDateColumn({ type: 'datetime' }),
+    __metadata("design:type", Date)
+], PoolAddress.prototype, "updatedDate", void 0);
+PoolAddress = __decorate([
+    typeorm_1.Entity('pooladdress')
+], PoolAddress);
+exports.PoolAddress = PoolAddress;
+//# sourceMappingURL=PoolAddress.js.map

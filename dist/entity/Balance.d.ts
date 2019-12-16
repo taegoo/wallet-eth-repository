@@ -5,6 +5,6 @@ export declare class Balance {
     coin: string;
     amount: string;
     unit: string;
-    regiDate: Date;
+    updatedDate: Date;
     wallet: Wallet;
 }

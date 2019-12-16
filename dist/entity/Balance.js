@@ -37,7 +37,7 @@ __decorate([
 __decorate([
     typeorm_1.UpdateDateColumn({ type: 'datetime' }),
     __metadata("design:type", Date)
-], Balance.prototype, "regiDate", void 0);
+], Balance.prototype, "updatedDate", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => Wallet_1.Wallet, wallet => wallet.balance),
     __metadata("design:type", Wallet_1.Wallet)

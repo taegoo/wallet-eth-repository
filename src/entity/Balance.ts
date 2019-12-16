@@ -21,7 +21,7 @@ export class Balance {
     public unit: string;
 
     @UpdateDateColumn({ type: 'datetime' })
-    regiDate: Date;
+    updatedDate: Date;
 
     @ManyToOne(type => Wallet, wallet => wallet.balance)
     wallet: Wallet;
