@@ -34,14 +34,14 @@ __decorate([
 ], Wallet.prototype, "regiDate", void 0);
 __decorate([
     typeorm_1.OneToMany(type => Address_1.Address, address => address.wallet, {
-        cascade: ['insert']
+        cascade: ['insert', 'update']
     }),
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], Wallet.prototype, "address", void 0);
 __decorate([
     typeorm_1.OneToMany(type => Balance_1.Balance, balance => balance.wallet, {
-        cascade: ['insert']
+        cascade: ['insert', 'update']
     }),
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)

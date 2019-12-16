@@ -20,13 +20,13 @@ export class Wallet {
     regiDate: Date;
 
     @OneToMany(type => Address, address => address.wallet, {
-        cascade: ['insert']
+        cascade: ['insert', 'update']
     })
     @JoinTable()
     address: Address[];
 
     @OneToMany(type => Balance, balance => balance.wallet, {
-        cascade: ['insert']
+        cascade: ['insert', 'update']
     })
     @JoinTable()
     balance: Balance[];
