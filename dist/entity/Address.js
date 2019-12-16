@@ -18,7 +18,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Address.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'bigint', }),
+    typeorm_1.Column({ type: 'bigint', nullable: true }),
     __metadata("design:type", Number)
 ], Address.prototype, "walletId", void 0);
 __decorate([
