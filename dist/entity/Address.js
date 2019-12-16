@@ -18,7 +18,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Address.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'bigint' }),
+    typeorm_1.Column({ type: 'bigint', }),
     __metadata("design:type", Number)
 ], Address.prototype, "walletId", void 0);
 __decorate([
@@ -30,9 +30,17 @@ __decorate([
     __metadata("design:type", String)
 ], Address.prototype, "address", void 0);
 __decorate([
+    typeorm_1.Column({ type: 'varchar', length: 64 }),
+    __metadata("design:type", String)
+], Address.prototype, "passPharse", void 0);
+__decorate([
     typeorm_1.CreateDateColumn({ type: 'datetime' }),
     __metadata("design:type", Date)
 ], Address.prototype, "regiDate", void 0);
+__decorate([
+    typeorm_1.UpdateDateColumn({ type: 'datetime' }),
+    __metadata("design:type", Date)
+], Address.prototype, "updatedDate", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => Wallet_1.Wallet, wallet => wallet.address),
     __metadata("design:type", Wallet_1.Wallet)

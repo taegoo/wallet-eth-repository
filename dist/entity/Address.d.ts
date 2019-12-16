@@ -4,6 +4,8 @@ export declare class Address {
     walletId: number;
     coin: string;
     address: string;
+    passPharse: string;
     regiDate: Date;
+    updatedDate: Date;
     wallet: Wallet;
 }

@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, UpdateDateColumn, JoinColumn, Index } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, UpdateDateColumn, Index } from 'typeorm';
 import { Wallet } from './Wallet';
 import { EtherDefaultUnit } from 'wallet-api-eth-common';
 

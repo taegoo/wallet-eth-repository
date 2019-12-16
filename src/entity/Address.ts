@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, Index, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, Index, ManyToOne, UpdateDateColumn } from 'typeorm';
 import { Wallet } from './Wallet';
 
 @Entity('address')
@@ -8,7 +8,7 @@ export class Address {
     @PrimaryGeneratedColumn({ type: 'bigint' })
     public id: number;
 
-    @Column({ type: 'bigint' })
+    @Column({ type: 'bigint', })
     public walletId: number;
 
     @Column({ type: 'varchar', length: 8 })
@@ -17,8 +17,14 @@ export class Address {
     @Column({ type: 'varchar', length: 64 })
     public address: string;
 
+    @Column({ type: 'varchar', length: 64 })
+    public passPharse: string;
+
     @CreateDateColumn({ type: 'datetime' })
     regiDate: Date;
+
+    @UpdateDateColumn({ type: 'datetime' })
+    updatedDate: Date;
 
     @ManyToOne(type => Wallet, wallet => wallet.address)
     wallet: Wallet;

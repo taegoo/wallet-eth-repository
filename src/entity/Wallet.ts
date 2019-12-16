@@ -16,9 +16,6 @@ export class Wallet {
     @Column({ type: 'varchar', length: 12 })
     public role: string;
 
-    @Column({ type: 'varchar', length: 64 })
-    public passPharse: string;
-
     @CreateDateColumn({ type: 'datetime' })
     regiDate: Date;
 

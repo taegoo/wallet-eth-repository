@@ -29,10 +29,6 @@ __decorate([
     __metadata("design:type", String)
 ], Wallet.prototype, "role", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'varchar', length: 64 }),
-    __metadata("design:type", String)
-], Wallet.prototype, "passPharse", void 0);
-__decorate([
     typeorm_1.CreateDateColumn({ type: 'datetime' }),
     __metadata("design:type", Date)
 ], Wallet.prototype, "regiDate", void 0);
