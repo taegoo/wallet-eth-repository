@@ -18,13 +18,10 @@ export class Address {
     public address: string;
 
     @Column({ type: 'varchar', length: 64 })
-    public passPharse: string;
+    public privateKey: string;
 
     @CreateDateColumn({ type: 'datetime' })
     regiDate: Date;
-
-    @UpdateDateColumn({ type: 'datetime' })
-    updatedDate: Date;
 
     @ManyToOne(type => Wallet, wallet => wallet.address)
     wallet: Wallet;
