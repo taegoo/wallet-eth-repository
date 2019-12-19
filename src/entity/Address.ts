@@ -8,7 +8,7 @@ export class Address {
     @PrimaryGeneratedColumn({ type: 'bigint' })
     public id: number;
 
-    @Column({ type: 'bigint', nullable: true })
+    @Column({ type: 'bigint' })
     public walletId: number;
 
     @Column({ type: 'varchar', length: 8 })
