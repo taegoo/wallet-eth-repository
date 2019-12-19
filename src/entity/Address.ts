@@ -17,7 +17,7 @@ export class Address {
     @Column({ type: 'varchar', length: 64 })
     public address: string;
 
-    @Column({ type: 'varchar', length: 64 })
+    @Column({ type: 'varchar', length: 66 })
     public privateKey: string;
 
     @CreateDateColumn({ type: 'datetime' })

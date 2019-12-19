@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", String)
 ], Address.prototype, "address", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'varchar', length: 64 }),
+    typeorm_1.Column({ type: 'varchar', length: 66 }),
     __metadata("design:type", String)
 ], Address.prototype, "privateKey", void 0);
 __decorate([
