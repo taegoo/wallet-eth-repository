@@ -8,15 +8,19 @@ export class Withdraw {
     @PrimaryGeneratedColumn({ type: 'bigint' })
     public id: number;
 
+    @Index('IX_WITHDRAW_WALLETID')
     @Column({ type: 'bigint' })
     public walletId: number;
 
+    @Index('IX_WITHDRAW_COIN')
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 
+    @Index('IX_WITHDRAW_TOKEN')
     @Column({ type: 'varchar', length: 32 })
     public token: string;
 
+    @Index('IX_WITHDRAW_REQUESTER')
     @Column({ type: 'varchar', length: 64 })
     public requester: string;
 

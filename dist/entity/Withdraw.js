@@ -18,18 +18,22 @@ __decorate([
     __metadata("design:type", Number)
 ], Withdraw.prototype, "id", void 0);
 __decorate([
+    typeorm_1.Index('IX_WITHDRAW_WALLETID'),
     typeorm_1.Column({ type: 'bigint' }),
     __metadata("design:type", Number)
 ], Withdraw.prototype, "walletId", void 0);
 __decorate([
+    typeorm_1.Index('IX_WITHDRAW_COIN'),
     typeorm_1.Column({ type: 'varchar', length: 8 }),
     __metadata("design:type", String)
 ], Withdraw.prototype, "coin", void 0);
 __decorate([
+    typeorm_1.Index('IX_WITHDRAW_TOKEN'),
     typeorm_1.Column({ type: 'varchar', length: 32 }),
     __metadata("design:type", String)
 ], Withdraw.prototype, "token", void 0);
 __decorate([
+    typeorm_1.Index('IX_WITHDRAW_REQUESTER'),
     typeorm_1.Column({ type: 'varchar', length: 64 }),
     __metadata("design:type", String)
 ], Withdraw.prototype, "requester", void 0);
