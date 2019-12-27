@@ -4,6 +4,7 @@ export declare class Withdraw {
     walletId: number;
     coin: string;
     token: string;
+    requester: string;
     to: string;
     unit: string;
     amount: string;

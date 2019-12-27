@@ -33,6 +33,10 @@ __decorate([
 __decorate([
     typeorm_1.Column({ type: 'varchar', length: 64 }),
     __metadata("design:type", String)
+], Withdraw.prototype, "requester", void 0);
+__decorate([
+    typeorm_1.Column({ type: 'varchar', length: 64 }),
+    __metadata("design:type", String)
 ], Withdraw.prototype, "to", void 0);
 __decorate([
     typeorm_1.Column({ type: 'varchar', length: 8, default: wallet_api_eth_common_1.EtherDefaultUnit }),

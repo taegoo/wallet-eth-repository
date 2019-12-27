@@ -18,6 +18,9 @@ export class Withdraw {
     public token: string;
 
     @Column({ type: 'varchar', length: 64 })
+    public requester: string;
+
+    @Column({ type: 'varchar', length: 64 })
     public to: string;
 
     @Column({ type: 'varchar', length: 8, default: EtherDefaultUnit })
