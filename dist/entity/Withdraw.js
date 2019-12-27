@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const Wallet_1 = require("./Wallet");
 const wallet_api_eth_common_1 = require("wallet-api-eth-common");
 let Withdraw = class Withdraw {
 };
@@ -18,10 +17,6 @@ __decorate([
     typeorm_1.PrimaryGeneratedColumn({ type: 'bigint' }),
     __metadata("design:type", Number)
 ], Withdraw.prototype, "id", void 0);
-__decorate([
-    typeorm_1.Column({ type: 'bigint' }),
-    __metadata("design:type", Number)
-], Withdraw.prototype, "walletId", void 0);
 __decorate([
     typeorm_1.Column({ type: 'varchar', length: 8 }),
     __metadata("design:type", String)
@@ -54,10 +49,6 @@ __decorate([
     typeorm_1.CreateDateColumn({ type: 'datetime' }),
     __metadata("design:type", Date)
 ], Withdraw.prototype, "recentDate", void 0);
-__decorate([
-    typeorm_1.ManyToOne(type => Wallet_1.Wallet, wallet => wallet.history),
-    __metadata("design:type", Wallet_1.Wallet)
-], Withdraw.prototype, "wallet", void 0);
 Withdraw = __decorate([
     typeorm_1.Entity('sithdraw')
 ], Withdraw);

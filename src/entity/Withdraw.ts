@@ -8,9 +8,6 @@ export class Withdraw {
     @PrimaryGeneratedColumn({ type: 'bigint' })
     public id: number;
 
-    @Column({ type: 'bigint' })
-    public walletId: number;
-
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 
@@ -34,8 +31,5 @@ export class Withdraw {
 
     @CreateDateColumn({ type: 'datetime' })
     recentDate: Date;
-
-    @ManyToOne(type => Wallet, wallet => wallet.history)
-    wallet: Wallet;
 
 }
