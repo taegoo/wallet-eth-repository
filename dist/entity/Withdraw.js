@@ -57,7 +57,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Withdraw.prototype, "recentDate", void 0);
 Withdraw = __decorate([
-    typeorm_1.Entity('sithdraw')
+    typeorm_1.Entity('withdraw')
 ], Withdraw);
 exports.Withdraw = Withdraw;
 //# sourceMappingURL=Withdraw.js.map

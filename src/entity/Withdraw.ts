@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, Up
 import { Wallet } from './Wallet';
 import { EtherDefaultUnit } from 'wallet-api-eth-common';
 
-@Entity('sithdraw')
+@Entity('withdraw')
 export class Withdraw {
 
     @PrimaryGeneratedColumn({ type: 'bigint' })
