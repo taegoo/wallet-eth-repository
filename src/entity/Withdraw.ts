@@ -16,8 +16,7 @@ export class Withdraw {
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 
-    @Index('IX_WITHDRAW_TOKEN')
-    @Column({ type: 'varchar', length: 32 })
+    @Column({ type: 'varchar', length: 32, unique: true })
     public token: string;
 
     @Index('IX_WITHDRAW_REQUESTER')

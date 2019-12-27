@@ -11,6 +11,7 @@ export class History {
     @Column({ type: 'bigint' })
     public walletId: number;
 
+    @Index('IX_HISTORY_COIN')
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 

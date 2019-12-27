@@ -23,6 +23,7 @@ __decorate([
     __metadata("design:type", Number)
 ], History.prototype, "walletId", void 0);
 __decorate([
+    typeorm_1.Index('IX_HISTORY_COIN'),
     typeorm_1.Column({ type: 'varchar', length: 8 }),
     __metadata("design:type", String)
 ], History.prototype, "coin", void 0);

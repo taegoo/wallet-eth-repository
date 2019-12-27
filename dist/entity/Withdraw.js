@@ -28,8 +28,7 @@ __decorate([
     __metadata("design:type", String)
 ], Withdraw.prototype, "coin", void 0);
 __decorate([
-    typeorm_1.Index('IX_WITHDRAW_TOKEN'),
-    typeorm_1.Column({ type: 'varchar', length: 32 }),
+    typeorm_1.Column({ type: 'varchar', length: 32, unique: true }),
     __metadata("design:type", String)
 ], Withdraw.prototype, "token", void 0);
 __decorate([
