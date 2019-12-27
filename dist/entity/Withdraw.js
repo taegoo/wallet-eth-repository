@@ -28,7 +28,7 @@ __decorate([
     __metadata("design:type", String)
 ], Withdraw.prototype, "coin", void 0);
 __decorate([
-    typeorm_1.Column({ type: 'varchar', length: 32, unique: true }),
+    typeorm_1.Column({ type: 'varchar', length: 36, unique: true }),
     __metadata("design:type", String)
 ], Withdraw.prototype, "token", void 0);
 __decorate([
