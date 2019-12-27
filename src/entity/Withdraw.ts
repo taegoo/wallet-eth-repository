@@ -2,8 +2,8 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, Up
 import { Wallet } from './Wallet';
 import { EtherDefaultUnit } from 'wallet-api-eth-common';
 
-@Entity('history')
-export class History {
+@Entity('sithdraw')
+export class Withdraw {
 
     @PrimaryGeneratedColumn({ type: 'bigint' })
     public id: number;
@@ -14,13 +14,11 @@ export class History {
     @Column({ type: 'varchar', length: 8 })
     public coin: string;
 
-    @Index('IX_HISTORY_TYPE')
-    @Column({ type: 'varchar', length: 12 })
-    public type: string;
+    @Column({ type: 'varchar', length: 32 })
+    public token: string;
 
-    @Index('IX_HISTORY_TOFROM')
     @Column({ type: 'varchar', length: 64 })
-    public toFrom: string;
+    public to: string;
 
     @Column({ type: 'varchar', length: 8, default: EtherDefaultUnit })
     public unit: string;
@@ -28,21 +26,11 @@ export class History {
     @Column({ type: 'varchar', length: 64 })
     public amount: string;
 
-    @Column({ type: 'varchar', length: 64 })
-    public fee: string;
-
-    @Column({ type: 'varchar', length: 64 })
-    public commission: string;
-
     @Column({ type: 'varchar', length: 12 })
     public state: string;
 
-    @Index('IX_HISTORY_TXID')
-    @Column({ type: 'varchar', length: 96, nullable: true })
-    public transactionId: string;
-
     @CreateDateColumn({ type: 'datetime' })
-    regiDate: Date;
+    recentDate: Date;
 
     @ManyToOne(type => Wallet, wallet => wallet.history)
     wallet: Wallet;

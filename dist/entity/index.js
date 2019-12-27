@@ -8,4 +8,5 @@ __export(require("./Balance"));
 __export(require("./History"));
 __export(require("./SyncedBlock"));
 __export(require("./Wallet"));
+__export(require("./Withdraw"));
 //# sourceMappingURL=index.js.map

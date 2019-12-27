@@ -1,16 +1,13 @@
 import { Wallet } from './Wallet';
-export declare class History {
+export declare class Withdraw {
     id: number;
     walletId: number;
     coin: string;
-    type: string;
-    toFrom: string;
+    token: string;
+    to: string;
     unit: string;
     amount: string;
-    fee: string;
-    commission: string;
     state: string;
-    transactionId: string;
-    regiDate: Date;
+    recentDate: Date;
     wallet: Wallet;
 }

@@ -1,6 +1,6 @@
 {
   "name": "wallet-eth-repository",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "wallet-eth-repository",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
