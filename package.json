@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://nb_met@bitbucket.org/cosmicbc/wallet-eth-repository.git"
+    "url": "https://github.com/taegoo/wallet-eth-repository.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/cosmicbc/wallet-eth-repository#readme",
+  "homepage": "",
   "dependencies": {
     "@types/node": "^12.12.7",
     "copyfiles": "^2.1.1",
@@ -33,6 +33,6 @@
     "typeorm": "^0.2.17",
     "typeorm-typedi-extensions": "^0.2.3",
     "typescript": "^3.4.5",
-    "wallet-api-eth-common": "git+https://nb_met:9JNSQZdU2rN7wjbS3UgL@bitbucket.org/nb_met/wallet-api-eth-common.git"
+    "wallet-api-eth-common": "git+https://13d9bae579803fe8e02d6dcbe58ec4da6ba77b02:x-oauth-basic@github.com/taegoo/wallet-api-eth-common.git"
   }
 }
