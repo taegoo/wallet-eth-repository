@@ -38,6 +38,9 @@ export class History {
     @Column({ type: 'varchar', length: 12 })
     public state: string;
 
+    @Column({ type: 'int' })
+    public checked: boolean;
+
     @Index('IX_HISTORY_TXID')
     @Column({ type: 'varchar', length: 96, nullable: true })
     public transactionId: string;
